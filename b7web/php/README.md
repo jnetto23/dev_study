@@ -4,6 +4,6 @@
 
 ### Projetos:
 
- - [x] [CRUD OO](/crud_oo)
- - [x] [Paginação](/pagination)
- - [ ] [Cadastro com Confirmação](/signup_with_confirmation) 
+ - [x] [CRUD OO](https://github.com/jnetto23/dev_study/blob/master/b7web/php/crud_oo)
+ - [x] [Paginação](https://github.com/jnetto23/dev_study/blob/master/b7web/php/crud_oo/pagination)
+ - [ ] [Cadastro com Confirmação](https://github.com/jnetto23/dev_study/blob/master/b7web/php/crud_oo/signup_with_confirmation) 
