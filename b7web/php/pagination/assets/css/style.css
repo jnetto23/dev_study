@@ -1,0 +1,7 @@
+table.table {
+    font-size: 0.8em;
+}
+
+table.table thead th {
+    padding: .35em;
+}
