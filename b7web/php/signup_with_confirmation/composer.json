@@ -1,0 +1,28 @@
+{
+    "name": "jnetto23/signup_with_confirmation",
+    "description": "Sistema de Cadastro com confirmação via email",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joao Netto",
+            "email": "jnetto@fyyb.com.br",
+            "role": "Developer",
+            "homepage": "https://fyyb.com.br"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fyyb\\":"fyyb/"
+        },
+        "files": [
+            "fyyb/Config.php"
+        ]
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.0"
+    }
+}
