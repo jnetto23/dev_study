@@ -6,3 +6,9 @@ __Obs.:__ Curso adquirido na plataforma de ensino UDEMY.
 **Instrutores:** 
  - [João Rangel](https://www.udemy.com/user/joao-rangel/) e, 
  - [Glaucio Daniel](https://www.udemy.com/user/glaucio-daniel-souza-santos/)
+
+
+ ## Seções:  
+ 1. História da Linguagem SQL, Instalação e Configuração do MySQL  
+ 2. MySQL Workbench, Bancos e Tabelas  
+ 
