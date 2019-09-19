@@ -12,3 +12,4 @@ __Obs.:__ Curso adquirido na plataforma de ensino UDEMY.
  1. História da Linguagem SQL, Instalação e Configuração do MySQL  
  2. MySQL Workbench, Bancos e Tabelas  
  3. DataType - Entendendo os Tipos de Dados  
+ 4. Conhecendo as subdivisões da linguagem SQL, DDL, DCL, DTL, DQL E DML  
