@@ -15,3 +15,4 @@ __Obs.:__ Curso adquirido na plataforma de ensino UDEMY.
  4. Conhecendo as subdivisões da linguagem SQL, DDL, DCL, DTL, DQL E DML  
  5. Comandos DML  
  6. Comandos DQL  
+ 7. Clausulas e Operadores  
