@@ -18,4 +18,5 @@ __Obs.:__ Curso adquirido na plataforma de ensino UDEMY.
  7. Clausulas e Operadores  
  8. Update e Delete  
  9. Constraints  
- 10. Consultas Avançadas (Joins e Subqueries)   
+ 10. Consultas Avançadas (Joins e Subqueries)  
+ 11. Group By  
