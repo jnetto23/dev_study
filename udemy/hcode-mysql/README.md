@@ -17,3 +17,4 @@ __Obs.:__ Curso adquirido na plataforma de ensino UDEMY.
  6. Comandos DQL  
  7. Clausulas e Operadores  
  8. Update e Delete  
+ 9. Constraints  
