@@ -20,3 +20,4 @@ __Obs.:__ Curso adquirido na plataforma de ensino UDEMY.
  9. Constraints  
  10. Consultas Avançadas (Joins e Subqueries)  
  11. Group By  
+ 12. Views, Stored Procedures e Functions
