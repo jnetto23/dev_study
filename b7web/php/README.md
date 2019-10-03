@@ -4,6 +4,8 @@
 
 ### Projetos:
 
- - [x] [CRUD OO](https://github.com/jnetto23/dev_study/blob/master/b7web/php/crud_oo)
- - [x] [Paginação](https://github.com/jnetto23/dev_study/blob/master/b7web/php/crud_oo/pagination)
- - [ ] [Cadastro com Confirmação](https://github.com/jnetto23/dev_study/blob/master/b7web/php/crud_oo/signup_with_confirmation) 
+ - [x] [CRUD OO](https://github.com/jnetto23/dev_study/blob/master/b7web/php/crud_oo)  
+ - [x] [Paginação](https://github.com/jnetto23/dev_study/blob/master/b7web/php/pagination)  
+ - [ ] [Login Basico](https://github.com/jnetto23/dev_study/blob/master/b7web/php/login_basico)  
+ - [ ] [Cadastro com Confirmação](https://github.com/jnetto23/dev_study/blob/master/b7web/php/signup_with_confirmation)  
+ 
