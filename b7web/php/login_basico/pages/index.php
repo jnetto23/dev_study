@@ -33,8 +33,10 @@
     <main>
 
     </main>  
-    <footer class="fixed-bottom">
-        <p>&copy; Developet by: <a href="https://github.com/jnetto23">Jnetto23</a></p>
+    <footer class="footer py-4 bg-dark text-light">
+        <div class="container text-center">
+            &copy;Developed by: <a href="https://github.com/jnetto23" target="_blanck"><strong>Jnetto23</strong></a>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

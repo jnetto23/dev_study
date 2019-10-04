@@ -8,12 +8,16 @@
     <title>404</title>
 </head>
 <body class="text-center">
-    <h1 class="mt-5 mb-3">Oooops!</h1>
-    <h2 class="mb-3">Página não encontrada  ;(</h2>
-    <a href="./" role="button" class="btn btn-lg btn-primary">Voltar para home</a>
+    <main>   
+        <h1 class="mt-5 mb-3">Oooops!</h1>
+        <h2 class="mb-3">Página não encontrada  ;(</h2>
+        <a href="./" role="button" class="btn btn-lg btn-primary">Voltar para home</a>
+    </main>
 
-    <footer class="fixed-bottom">
-        <p>&copy; Developet by: <a href="https://github.com/jnetto23">Jnetto23</a></p>
+    <footer class="footer py-4 bg-dark text-light">
+        <div class="container text-center">
+            &copy;Developed by: <a href="https://github.com/jnetto23" target="_blanck"><strong>Jnetto23</strong></a>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

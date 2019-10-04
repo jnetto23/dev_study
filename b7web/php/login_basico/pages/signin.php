@@ -8,24 +8,30 @@
     <title>Login</title>
 </head>
 <body>
-    <form id="signin" method="POST" class="form-signin mt-5">
+    <form id="signin" method="POST" class="form mt-5">
         <h1 class="h3 mb-3 text-center">Login</h1>
         <label for="email" class="i">Email:</label>
-        <input type="email" id="email" class="form-control mb-3"required autofocus>
-        <div class="d-flex justify-content-between"><label for="pwd" class="i">Senha:</label><a class="f-14 i" href="./forgot">Recuperar Senha</a></div>
-        <input type="password" id="pwd" class="form-control mb-3" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        <input type="email" id="email" class="form-control mb-3"data-error autofocus>
+        <div class="d-flex justify-content-between">
+            <label for="pwd" class="i">Senha:</label>
+            <a class="f-14 i" href="./forgot">Recuperar Senha</a>
+        </div>
+        <input type="password" id="pwd" class="form-control mb-3" data-error>
+        <button class="mt-3 btn btn-lg btn-primary btn-block" type="submit">Login</button>
         <div class="links d-flex justify-content-center">
             <span class="text-muted f-14 i">Não tem uma conta? Faça seu <a href="./signup">Cadastro</a></span>
         </div>
     </form>
 
-    <footer class="fixed-bottom">
-        <p>&copy; Developet by: <a href="https://github.com/jnetto23">Jnetto23</a></p>
+    <footer class="footer py-4 bg-dark text-light">
+        <div class="container text-center">
+            &copy;Developed by: <a href="https://github.com/jnetto23" target="_blanck"><strong>Jnetto23</strong></a>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
