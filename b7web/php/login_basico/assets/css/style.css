@@ -1,0 +1,37 @@
+.form-signin,
+.links {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+.f-14 {
+    font-size: 14px !important;
+    
+}
+.i {
+    font-style: italic;
+}
+label {
+    margin-bottom: 0.1rem;
+}
+footer {
+    width: 100% !important;
+    height: 70px !important;
+    line-height: 70px;
+    text-align: center !important;
+    background-color: #000 !important;
+}
+footer p {
+    margin: 0 !important;
+    color: #fff !important;
+}
+input.form-error {
+    margin-bottom: 0.1rem !important;
+}
+span.form-error {
+    display: block;
+    color: red;
+    font-size: .7rem;
+    margin-bottom: 0.2rem;
+}
