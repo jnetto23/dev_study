@@ -9,7 +9,10 @@ DROP TABLE IF EXISTS tb_users;
 CREATE TABLE IF NOT EXISTS tb_users (
 	id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    pwd VARCHAR(32) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    pwd VARCHAR(32) NOT NULL,
     CONSTRAINT PK_users PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO tb_users (name, email, pwd) VALUES ('Testador', 'teste@teste.com', MD5('teste'));
+SELECT * FROM tb_users;
