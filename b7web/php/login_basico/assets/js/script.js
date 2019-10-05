@@ -16,13 +16,6 @@
                     return;
                 };
 
-                // Validar email ja cadastrado
-                let email = formSignup.querySelector('#email');
-                if(ckEmail(email)) {
-                    addErrorInput(email, 'Email already registered')
-                    return;
-                }
-
                 if(!stt) formSignup.submit();
             });
         };
@@ -38,11 +31,7 @@
         };
     };
     
-    function ckEmail(email) {
-        // Criar função no backend para consultar email na base de dados;
-        return false;
-    };
-
+   
     function validForm(form, cb) {
         inputs = form.querySelectorAll('input:not([type=submit])');
         form.addEventListener('submit', e => {

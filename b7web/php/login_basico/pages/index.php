@@ -1,3 +1,15 @@
+<?php 
+	
+	require './controllers/UserController.php';
+
+	$u = new UserController();
+	if(!$u->ckLogin()) { 
+		header('Location:'.'./signin');
+		exit;	
+	};
+	$user = $u->getUser($u->ckLogin());
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -30,8 +42,13 @@
 			</div>
 		</nav>
     </header>
-    <main>
-
+    <main class="container p-3">
+		
+		<h3>Welcome,</h3>
+		<div>
+			<span class="d-block"><strong class="h5 m-0">Your Name: </strong><?php echo $user['name']; ?></span>
+			<span class="d-block"><strong class="h5 m-0">Your Email: </strong><?php echo $user['email']; ?></span>
+		</div>
     </main>  
     <footer class="footer py-4 bg-dark text-light">
         <div class="container text-center">
