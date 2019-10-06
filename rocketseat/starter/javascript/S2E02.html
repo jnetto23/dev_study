@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        <input id="name" type="text" name="name" class="name"/>
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+        // Trabalhando com a DOM
+        var inputElementById = document.getElementById('name');
+        var inputElementsByTagName = document.getElementsByTagName('input')[0];
+        var inputElementsByClassName = document.getElementsByClassName('name')[0];
+
+        console.log('ElementById: ', inputElementById);
+        console.log('ElementByTagName: ', inputElementsByTagName);
+        console.log('ElementsByClassName: ', inputElementsByClassName);
+
+        var inputQuerySelector = document.querySelector('input[name=name]');
+        var inputQuerySelectorAll = document.querySelectorAll('input')[0]; 
+
+        console.log('QuerySelector: ', inputQuerySelector);
+        console.log('QuerySelectorAll: ', inputQuerySelectorAll);
+
+        var btn  = document.querySelector('button.botao');
+        btn.onclick = function () {
+            alert(inputQuerySelectorAll.value);
+        }
+
+    </script>
+</body>
+</html>
