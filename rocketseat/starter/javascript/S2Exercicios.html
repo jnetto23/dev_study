@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        <div id="ex1">
+            <button id="btn-ex1">Clique Aqui</button>
+            <hr/>
+            <div id="ex1-content"></div>
+            <hr/>
+        </div>
+        <div id="ex3">
+            <input type="text" name="nome">
+            <button onClick="adicionar()">Adicionar</button>
+                
+            <ul></ul>
+        </div>
+    </div>
+
+    <script>
+        // https://skylab.rocketseat.com.br/api/files/1566499161406.pdf
+        
+        // Exercicio 1
+        /*
+            Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+            vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+            aparecer na tela
+        */
+        
+        var ex1Content = document.getElementById('ex1-content');
+        ex1Content.style.display = 'flex';
+        ex1Content.style.flexWrap = 'wrap';
+        ex1Content.style.justifyContent = 'center';
+
+        var btnEx1 = document.getElementById('btn-ex1');
+        btnEx1.onclick = function () {
+            var el = document.createElement('div');
+            el.classList.add = 'newElement';
+            el.style.width = '100px';
+            el.style.height = '100px';
+            el.style.margin = '10px';
+            el.style.backgroundColor = '#f00';
+            el.setAttribute('onmouseover', "changeColor(this)");
+            ex1Content.appendChild(el);
+
+        }
+
+        // Exercicio 2
+        /*
+            Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+            algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+
+        */
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+              color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        };
+        function changeColor(x) {
+            x.style.backgroundColor = getRandomColor();
+        }
+        // Exercicio 3
+        /*
+            Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+            ● Diego
+            ● Gabriel
+            ● Lucas
+
+        */
+        
+        var ex3 = document.querySelector('#ex3 ul');
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        for(var nome of nomes) {
+            var el = document.createElement('li');
+            var txt = document.createTextNode(nome);
+            el.appendChild(txt);
+            ex3.appendChild(el);
+        };
+        // Exercicio 4
+        /*
+            Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de
+            nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
+            demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique.
+        */
+       var input = document.querySelector('#ex3 input');
+       function adicionar() {
+            var nome = input.value;
+            var el = document.createElement('li');
+            var txt = document.createTextNode(nome);
+            el.appendChild(txt);
+            ex3.appendChild(el);
+            input.value = '';
+            input.focus();
+       };
+    </script>
+</body>
+</html>
