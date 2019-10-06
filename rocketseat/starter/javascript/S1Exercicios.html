@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // https://skylab.rocketseat.com.br/api/files/1566498717618.pdf
+        
+        // Exercício 1
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+        // Retorno:
+        // O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros" com nº 1293.
+        
+        var str = `O usuário mora em ${endereco.cidade} / ${endereco.uf}, no ${endereco.bairro}, na rua "${endereco.rua}" com nº ${endereco.numero}.`;
+        console.log('Ex1: ' + str);
+
+        // Exercício 2
+        // Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:
+        function pares(x, y) {
+            var pares = [];
+            for(var i = x; i <= y; i++) {
+                if((i % 2) === 0) {
+                    pares.push(i);
+                }
+            };
+            return pares.join(', ');
+        };
+        var pares = pares(32, 321);
+        console.log('Ex2: ' + pares);
+
+        // Exercício 3
+        // Escreva uma função que verifique se o vetor de habilidades passado possui a habilidade "Javascript" e retorna um booleano true/false caso exista ou não.
+        function temHabilidade(skills) {
+            return (skills.indexOf('Javascript') >= 0) ? true : false;
+        };
+        var skills = ["Javascript", "ReactJS", "React Native"];
+        console.log('Ex3: ' + temHabilidade(skills)); 
+
+        // Exercício 4
+        // Escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é:
+        function experiencia(anos) {
+            // De 0-1 ano: Iniciante
+            // De 1-3 anos: Intermediário
+            // De 3-6 anos: Avançado
+            // De 7 acima: Jedi Master
+            if(anos <= 1) return 'Iniciante';
+            if(anos >= 1 && anos <= 3) return 'Intermediário';
+            if(anos >= 3 && anos <= 6) return 'Avançado';
+            if(anos >= 7) return 'Jedi Master';
+        }
+        var anosEstudo = 7;
+        console.log('Ex4: ' + experiencia(anosEstudo));
+        
+        // Exercício 5
+        
+        // Dado o vetor:
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            },
+            {
+                nome: "João",
+                habilidades: ["HTML5", "CSS3", "Javascript", "PHP", "MySQL", "ReactJS", "React Native"]
+            }
+        ];
+
+        // Escreva uma função que produza o seguinte resultado:
+        // O Diego possui as habilidades: Javascript, ReactJS, Redux
+        // O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+        function ex5(user) {
+            var r = [];
+            for(var u of usuarios) {
+                if(user){
+                    if(u.nome === user) {
+                        return `O ${u.nome} possui as habilidades: ${u.habilidades.join(', ')}`;
+                    };
+                } else {
+                    r.push(`O ${u.nome} possui as habilidades: ${u.habilidades.join(', ')}`);
+                }
+            }
+            return r.join('\n');
+        }
+        console.log('Ex5: (Todos) - ' + ex5());
+        console.log('Ex5: (Filtro: Diego) - ' + ex5('Diego'));
+        console.log('Ex5: (Filtro: Gabriel) - ' + ex5('Gabriel'));
+        console.log('Ex5: (Filtro: João) - ' + ex5('João'));
+
+    </script>
+</body>
+</html>
