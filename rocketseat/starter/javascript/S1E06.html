@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Condicionais
+
+        // IF ELSE
+        function retornaSexo(sexo) {
+            // M, F
+            // Masculino, Feminino
+            if(sexo === 'M') {
+                return 'Masculino';
+            } else if(sexo === 'F') {
+                return 'Feminino';
+            } else {
+                return 'Outro';
+            }
+            
+        };
+
+        console.log(retornaSexo('M'));
+        console.log(retornaSexo('F'));
+        console.log(retornaSexo('X'));
+
+        function retornaSexo2(sexo) {
+            // M, F
+            // Masculino, Feminino
+            return (sexo == 'M') ? 'Masculino' : ( (sexo === 'F') ? 'Feminino' : 'Outro' );
+        };
+        console.log(retornaSexo2('M'));
+        console.log(retornaSexo2('F'));
+        console.log(retornaSexo2('X'));
+
+        // SWITCH
+        function retornaSexo3(sexo) {
+            switch(sexo) {
+                case 'M': 
+                    return 'Masculino';
+                case 'F': 
+                    return 'Feminino';
+                default:
+                    return 'Outro';
+            };
+        };
+        console.log(retornaSexo3('M'));
+        console.log(retornaSexo3('F'));
+        console.log(retornaSexo3('X'));
+
+
+    </script>
+</body>
+</html>
