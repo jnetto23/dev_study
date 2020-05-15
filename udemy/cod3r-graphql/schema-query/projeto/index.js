@@ -1,11 +1,28 @@
 const { ApolloServer, gql } = require("apollo-server");
 
+const usuarios = [{
+    id: 1,
+    nome: 'Joao Netto',
+    email: 'jnetto@fyyb.com.br',
+    idade: 28
+}, {
+    id: 2,
+    nome: 'Fernanda Marques',
+    email: 'fernanda@email.com',
+    idade: 31
+}, {
+    id: 3,
+    nome: 'JJ',
+    email: 'jj@email.com',
+    idade: 1
+}]
+
 const typeDefs = gql`
     # Postos de entrada da API
     type Query {
         ola: String,
         horaAtual: String,
-        usuarioLogado: Usuario,
+        usuarios: [Usuario],
         produtoEmDestaque: Produto,
         numerosMegaSena: [Int!]!
     }
@@ -15,8 +32,6 @@ const typeDefs = gql`
         nome: String!,
         email: String!,
         idade: Int!,
-        salario: Float,
-        vip: Boolean
     }
 
     type Produto {
@@ -28,11 +43,6 @@ const typeDefs = gql`
 `;
 
 const resolvers = {
-    Usuario: {
-        salario(usuario) {
-            return usuario.salario_real
-        }
-    },
     Produto: {
         precoComDesconto(produto) {
             return produto.preco * (1 - ((produto.desconto) ? produto.desconto : 0))
@@ -46,15 +56,8 @@ const resolvers = {
         horaAtual() {
             return `${new Date().toLocaleString()}`;
         },
-        usuarioLogado() {
-            return {
-                id: 1,
-                nome: 'Joao Netto',
-                email: 'jnetto@fyyb.com.br',
-                idade: (parseInt(new Date().getFullYear())  - 1992),
-                salario_real: 9999.99,
-                vip: true
-            }
+        usuarios() {
+            return usuarios;
         },
         produtoEmDestaque() {
             return {
