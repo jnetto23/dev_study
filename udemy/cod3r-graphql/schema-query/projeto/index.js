@@ -4,25 +4,28 @@ const usuarios = [{
     id: 1,
     nome: 'Joao Netto',
     email: 'jnetto@fyyb.com.br',
-    idade: 28
+    idade: 28,
+    perfil_id: 1
 }, {
     id: 2,
     nome: 'Fernanda Marques',
     email: 'fernanda@email.com',
-    idade: 31
+    idade: 31,
+    perfil_id: 2
 }, {
     id: 3,
     nome: 'JJ',
     email: 'jj@email.com',
-    idade: 1
+    idade: 1,
+    perfil_id: 2
 }];
 
 const perfis = [{
     id: 1,
-    nome: 'Comum'
+    nome: 'Administrador'
 }, {
     id: 2,
-    nome: 'Administrador'
+    nome: 'Comum'
 }];
 
 const typeDefs = gql`
@@ -39,10 +42,11 @@ const typeDefs = gql`
     }
 
     type Usuario {
-        id: ID!,
+        id: Int!,
         nome: String!,
         email: String!,
         idade: Int!,
+        perfil: Perfil
     }
 
     type Produto {
@@ -65,6 +69,13 @@ const resolvers = {
         }
     },
 
+    Usuario: {
+        perfil(usuario) {
+            const perfil = perfis.filter(p => p.id === usuario.perfil_id);
+            return (perfil) ? perfil[0] : null;         
+        }
+    },
+
     Query: {
         ola() {
             return 'Basta retornar uma string';
@@ -76,7 +87,7 @@ const resolvers = {
             return usuarios;
         },
         usuario(_, { id }) {
-            const usuario = usuarios.filter(u => u.id == id);
+            const usuario = usuarios.filter(u => u.id === id);
             return (usuario) ? usuario[0] : null; 
         },
         produtoEmDestaque() {
