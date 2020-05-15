@@ -19,6 +19,12 @@ const typeDefs = gql`
 `;
 
 const resolvers = {
+    Usuario: {
+        salario(usuario) {
+            return usuario.salario_real
+        }
+    },
+
     Query: {
         ola() {
             return 'Basta retornar uma string';
@@ -32,7 +38,7 @@ const resolvers = {
                 nome: 'Joao Netto',
                 email: 'jnetto@fyyb.com.br',
                 idade: (parseInt(new Date().getFullYear())  - 1992),
-                salario: 9999.99,
+                salario_real: 9999.99,
                 vip: true
             }
         }
