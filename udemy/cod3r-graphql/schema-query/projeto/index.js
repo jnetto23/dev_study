@@ -5,6 +5,16 @@ const typeDefs = gql`
     type Query {
         ola: String,
         horaAtual: String
+        usuarioLogado: Usuario
+    }
+
+    type Usuario {
+        id: ID!,
+        nome: String!,
+        email: String!,
+        idade: Int!,
+        salario: Float,
+        vip: Boolean
     }
 `;
 
@@ -15,6 +25,16 @@ const resolvers = {
         },
         horaAtual() {
             return `${new Date().toLocaleString()}`;
+        },
+        usuarioLogado() {
+            return {
+                id: 1,
+                nome: 'Joao Netto',
+                email: 'jnetto@fyyb.com.br',
+                idade: (parseInt(new Date().getFullYear())  - 1992),
+                salario: 9999.99,
+                vip: true
+            }
         }
     }
 };
