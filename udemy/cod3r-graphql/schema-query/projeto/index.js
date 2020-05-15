@@ -15,7 +15,15 @@ const usuarios = [{
     nome: 'JJ',
     email: 'jj@email.com',
     idade: 1
-}]
+}];
+
+const perfis = [{
+    id: 1,
+    nome: 'Comum'
+}, {
+    id: 2,
+    nome: 'Administrador'
+}];
 
 const typeDefs = gql`
     # Postos de entrada da API
@@ -26,6 +34,8 @@ const typeDefs = gql`
         usuario(id:ID): Usuario,
         produtoEmDestaque: Produto,
         numerosMegaSena: [Int!]!
+        perfis: [Perfil]!,
+        perfil(id: Int): Perfil
     }
 
     type Usuario {
@@ -40,6 +50,11 @@ const typeDefs = gql`
         preco: Float!,
         desconto: Float,
         precoComDesconto: Float
+    }
+
+    type Perfil {
+        id: Int!,
+        nome: String!
     }
 `;
 
@@ -89,7 +104,15 @@ const resolvers = {
             };
                 
             return numeros.sort(crescente);
+        },
+        perfis() {
+            return perfis;
+        },
+        perfil(_, { id }) {
+            const perfil = perfis.filter(p => p.id === id);
+            return (perfil) ? perfil[0] : null;
         }
+
     }
 };
 
