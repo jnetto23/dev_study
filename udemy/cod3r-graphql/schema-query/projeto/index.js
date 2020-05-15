@@ -6,7 +6,8 @@ const typeDefs = gql`
         ola: String,
         horaAtual: String,
         usuarioLogado: Usuario,
-        produtoEmDestaque: Produto
+        produtoEmDestaque: Produto,
+        numerosMegaSena: [Int!]!
     }
 
     type Usuario {
@@ -61,6 +62,25 @@ const resolvers = {
                 preco: 100.00,
                 desconto: 0.5
             }
+        },
+        numerosMegaSena() {
+            const crescente = (a, b) => a - b;
+            let numeros = [];
+
+            function adicionar() {
+                let n = (parseInt(Math.random() * 60 + 1));
+                if(numeros.indexOf(n) > 0) {
+                    adicionar();
+                } else {
+                    numeros.push(n);
+                }
+            };
+
+            while(numeros.length <= 6) {
+                adicionar();
+            };
+                
+            return numeros.sort(crescente);
         }
     }
 };
