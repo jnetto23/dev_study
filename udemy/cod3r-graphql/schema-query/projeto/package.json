@@ -1,0 +1,19 @@
+{
+    "name": "schema-query",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    },
+    "dependencies": {
+        "apollo-server": "^2.13.1",
+        "graphql": "^15.0.0"
+    }
+}
