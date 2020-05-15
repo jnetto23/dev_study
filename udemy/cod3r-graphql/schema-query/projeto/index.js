@@ -3,7 +3,8 @@ const { ApolloServer, gql } = require("apollo-server");
 const typeDefs = gql`
     # Postos de entrada da API
     type Query {
-        ola: String
+        ola: String,
+        horaAtual: String
     }
 `;
 
@@ -11,6 +12,9 @@ const resolvers = {
     Query: {
         ola() {
             return 'Basta retornar uma string';
+        },
+        horaAtual() {
+            return `${new Date().toLocaleString()}`;
         }
     }
 };
