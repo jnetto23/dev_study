@@ -23,6 +23,7 @@ const typeDefs = gql`
         ola: String,
         horaAtual: String,
         usuarios: [Usuario],
+        usuario(id:ID): Usuario,
         produtoEmDestaque: Produto,
         numerosMegaSena: [Int!]!
     }
@@ -58,6 +59,10 @@ const resolvers = {
         },
         usuarios() {
             return usuarios;
+        },
+        usuario(_, { id }) {
+            const usuario = usuarios.filter(u => u.id == id);
+            return (usuario) ? usuario[0] : null; 
         },
         produtoEmDestaque() {
             return {
