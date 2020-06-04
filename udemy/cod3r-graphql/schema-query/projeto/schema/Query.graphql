@@ -1,0 +1,11 @@
+# Postos de entrada da API
+type Query {
+    ola: String,
+    horaAtual: String,
+    usuarios: [Usuario],
+    usuario(id: Int): Usuario,
+    produtoEmDestaque: Produto,
+    numerosMegaSena: [Int!]!
+    perfis: [Perfil]!,
+    perfil(id: Int): Perfil
+}
